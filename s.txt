@@ -1,0 +1,36 @@
+local MM = Instance.new('ScreenGui')
+MM.Enabled = true
+local Frame = Instance.new('Frame')
+Frame.BackgroundTransparency = 0
+Frame.BorderSizePixel = 1
+Frame.AnchorPoint = Vector2.new(0, 0)
+Frame.Size = UDim2.new(0, 461, 0, 249)
+Frame.Position = UDim2.new(0.525348186, 0, 0.111982085, 0)
+Frame.Active = true
+Frame.Selectable = true
+Frame.Draggable = true
+local EquipAllFBalls = Instance.new('TextButton')
+EquipAllFBalls.BackgroundTransparency = 0
+EquipAllFBalls.BorderSizePixel = 0
+EquipAllFBalls.AnchorPoint = Vector2.new(0, 0)
+EquipAllFBalls.Text = "Equip All Fire Balls"
+EquipAllFBalls.Modal = false
+EquipAllFBalls.Size = UDim2.new(0, 96, 0, 30)
+EquipAllFBalls.Position = UDim2.new(0.0802603066, 0, 0.076305218, 0)
+local EquipAllBombs = Instance.new('TextButton')
+EquipAllBombs.BackgroundTransparency = 0
+EquipAllBombs.BorderSizePixel = 0
+EquipAllBombs.AnchorPoint = Vector2.new(0, 0)
+EquipAllBombs.Text = "Equip All Bombs"
+EquipAllBombs.Modal = false
+EquipAllBombs.Size = UDim2.new(0, 96, 0, 30)
+EquipAllBombs.Position = UDim2.new(0.353579193, 0, 0.076305218, 0)
+MM.Parent = game.Players["noobguy5511"].PlayerGui
+
+EquipAllFBalls.MouseButton1Up:Connect(function()
+	for i,v in ipairs(game.Players.LocalPlayer.Backpack:GetChildren()) do
+		if v.Name == "Fire bomb" then
+			v.Parent = game.Players["noobguy5511"].Character
+		end
+	end
+end)
