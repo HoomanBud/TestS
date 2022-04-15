@@ -25,7 +25,7 @@ EquipAllBombs.Text = "Equip All Bombs"
 EquipAllBombs.Modal = false
 EquipAllBombs.Size = UDim2.new(0, 96, 0, 30)
 EquipAllBombs.Position = UDim2.new(0.353579193, 0, 0.076305218, 0)
-MM.Parent = game.Players["noobguy5511"].PlayerGui
+MM.Parent = game.Players["n00bguy5511"].PlayerGui
 
 EquipAllFBalls.MouseButton1Up:Connect(function()
 	for i,v in ipairs(game.Players.LocalPlayer.Backpack:GetChildren()) do
